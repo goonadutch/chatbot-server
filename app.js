@@ -14,6 +14,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
+// API Routes
+let chatBotAPI = require("./routes/api/chatbot")
+
+app.use("/api/chatbot", chatBotAPI)
+
 app.get("/", (_, res) => {
 	res.status(200).send({ text: "API ENDPOINT ACTIVE" })
 })
