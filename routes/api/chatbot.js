@@ -33,13 +33,13 @@ router.post("/chat", async (req, res) => {
 			body: JSON.stringify({
 				prompt: {
 					context:
-						"Be a good chatbot that can answer almost any question that an adult may have.",
+						"Be a good chatbot that can answer almost any question that an adult may have. Try to answer with just simple sentences. Your response will not include any bold text, or points or any things. Your response will not exceed more than 5 lines. Just straight sentences. Try to be as concise as possible",
 					examples: [
 						{
-							input: { content: "How is it going today?" },
+							input: { content: "You will respond to all the things I say in just clean sentences. Just normal text. Don't include points or bold texts. Just plain sentences. Be very exact.  Make sure your response will be less than 5 sentences. It should not have paragraphs as well." },
 							output: {
 								content:
-									"I am doing well, thank you for asking. How are you doing today? What would you like to speak about today?",
+									"I am doing well, thank you for asking. I'll be exact and will make sure my response will be simple sentences than do not exceed 5 sentences and no paragraphs. How are you doing today? What would you like to speak about today?",
 							},
 						},
 					],
